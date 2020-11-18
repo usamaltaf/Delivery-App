@@ -1,6 +1,7 @@
 const colors = {
   primary: "#d1d646", //Yellow
   secondary: "#212738", //Black Light
+  white: "#ffffff",
 };
 
 const sizes = {
@@ -23,12 +24,15 @@ const sizes = {
 const fonts = {
   h1: {
     fontSize: sizes.h1,
+    fontFamily: "poppinblack",
   },
   h2: {
     fontSize: sizes.h2,
+    fontFamily: "poppinblack",
   },
   h3: {
     fontSize: sizes.h3,
+    fontFamily: "poppinblack",
   },
   header: {
     fontSize: sizes.header,

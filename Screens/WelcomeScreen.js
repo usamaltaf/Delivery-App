@@ -11,6 +11,7 @@ const fetchFont = () => {
   return Font.loadAsync({
     Popbi: require("../assets/Fonts/Poppins-BoldItalic.ttf"),
     popeb: require("../assets/Fonts/Poppins-ExtraBold.ttf"),
+    poppinblack: require("../assets/Fonts/Poppins-Black.ttf"),
   });
 };
 
