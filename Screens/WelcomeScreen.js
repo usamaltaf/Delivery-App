@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState,Component } from "react";
 import { StyleSheet, View, Text, Image, Button, Alert } from "react-native";
 import { colors } from "../Constant/theme";
 import { windowHeight, windowWidth } from "../Constant/Dimensions";
 import * as Font from "expo-font";
 import { AppLoading } from "expo";
-
+import Landingpage from "./Landingpage";
 //The Image URI in a constant as it will remain Same
 
 const fetchFont = () => {
@@ -15,8 +15,10 @@ const fetchFont = () => {
   });
 };
 
-export function WelcomeScreen(props) {
-  const [FontLoaded, setFontLoaded] = useState(false);
+export default class  WelcomeScreen extends Component{
+  render(){
+    const [FontLoaded, setFontLoaded] = useState(false);
+    const { navigation} = this.props;
   if (!FontLoaded) {
     return (
       <AppLoading
@@ -38,7 +40,7 @@ export function WelcomeScreen(props) {
         />
       </View>
       <View style={style.ButtonView}>
-        <Button color="#212738" title="Login" />
+        <Button color="#212738" title="Login"  onPress={()=>navigation.navigate('Landingpage')} />
       </View>
       <View style={style.ButtonView}>
         <Button color="#212738" title="Signup" />
@@ -50,11 +52,12 @@ export function WelcomeScreen(props) {
           color={colors.primary}
           title="Terms of Service"
           accessibilityLabel="See the terms"
-          onPress={() => Alert("Terms btn pressed")} //We still Need to Add Navigation
+          onPress={() => alert("Terms btn pressed")} //We still Need to Add Navigation
         />
       </View>
     </View>
   );
+  }
 }
 
 const style = StyleSheet.create({

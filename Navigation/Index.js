@@ -1,5 +1,5 @@
 import React from "react";
-import { createAppContainer, createStackNavigator } from "react-navigation";
+import {  createStackNavigator } from "react-navigation";
 
 import WelcomeScreen from "../Screens/WelcomeScreen";
 import Login from "../Screens/Login";
@@ -12,7 +12,7 @@ import Track from "../Screens/Track";
 
 import { theme } from "../Constant";
 
-const screens = createStackNavigator({
+export default createStackNavigator({
   WelcomeScreen,
   Login,
   Signup,
@@ -21,6 +21,9 @@ const screens = createStackNavigator({
   Pick,
   Track,
   Settings,
+},
+{
+  initialRouteName="Landingpage"
 });
 
-export default createAppContainer(screens);
+//  export default createAppContainer(screen);
