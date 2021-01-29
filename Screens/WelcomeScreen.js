@@ -1,10 +1,8 @@
 import React, { useState,Component } from "react";
 import { StyleSheet, View, Text, Image, Button, Alert } from "react-native";
 import { colors } from "../Constant/theme";
-import { windowHeight, windowWidth } from "../Constant/Dimensions";
 import * as Font from "expo-font";
 import { AppLoading } from "expo";
-import Landingpage from "./Landingpage";
 //The Image URI in a constant as it will remain Same
 
 const fetchFont = () => {
@@ -14,7 +12,6 @@ const fetchFont = () => {
     poppinblack: require("../assets/Fonts/Poppins-Black.ttf"),
   });
 };
-
 export default class  WelcomeScreen extends Component{
   render(){
     const [FontLoaded, setFontLoaded] = useState(false);
@@ -100,4 +97,3 @@ const style = StyleSheet.create({
   },
 });
 
-export default WelcomeScreen;

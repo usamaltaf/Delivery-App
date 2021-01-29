@@ -1,12 +1,13 @@
-import React from "react";
-import WelcomeScreen from "./Navigation/Index";
-import { createAppContainer} from "react-navigation";
+import 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
+import RootStackScreen from './Navigation/RootStackNavigator';
 
-
-export default function App() 
-{
-  return <WelcomeScreen />; //WE can only pass One screen Because Return only return one thing
+const App =()=>{
+  return(
+    <NavigationContainer>
+    <RootStackScreen navigation={WelcomeScreen} />
+    </NavigationContainer>
+  )
 }
-
-export default createAppContainer(WelcomeScreen);
+export default App;
 

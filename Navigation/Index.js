@@ -1,6 +1,5 @@
-import React from "react";
-import {  createStackNavigator } from "react-navigation";
-
+import *  as React from "react";
+import { createStackNavigator } from '@react-navigation/stack';
 import WelcomeScreen from "../Screens/WelcomeScreen";
 import Login from "../Screens/LoginScreen";
 import Drop from "../Screens/Drop";
@@ -10,7 +9,6 @@ import Settings from "../Screens/Settings";
 import Signup from "../Screens/Signup";
 import Track from "../Screens/Track";
 
-import { theme } from "../Constant";
 
 export default createStackNavigator({
   WelcomeScreen,
