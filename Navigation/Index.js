@@ -2,7 +2,7 @@ import React from "react";
 import {  createStackNavigator } from "react-navigation";
 
 import WelcomeScreen from "../Screens/WelcomeScreen";
-import Login from "../Screens/Login";
+import Login from "../Screens/LoginScreen";
 import Drop from "../Screens/Drop";
 import Landingpage from "../Screens/Landingpage";
 import Pick from "../Screens/Pick";
